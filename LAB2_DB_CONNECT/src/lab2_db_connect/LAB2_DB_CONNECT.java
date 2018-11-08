@@ -9,10 +9,10 @@ import java.sql.SQLException;
  * @author Darek
  */
 public class LAB2_DB_CONNECT {
-    public static void main(String[] args) {
+    public LAB2_DB_CONNECT() {
         //postgresqlConnect();
-        mysqlConnect();
-        //sqliteConnect();
+        //mysqlConnect();
+        sqliteConnect();
     }
     
     private static void postgresqlConnect(){
@@ -74,6 +74,7 @@ public class LAB2_DB_CONNECT {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
             System.exit(0);
         }
+        if (c!=null) System.out.println("good"); else System.out.println("failed");
         System.out.println("Opened database successfully");
     }
 }
